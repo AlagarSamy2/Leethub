@@ -9,22 +9,17 @@ class Solution:
             if len(stack)==0:
                 list1.append(i)
                 stack.append(s1[i])
-                # print(stack,'1')
                 continue
             if s1[i]=='(' and stack[0]==')':
                 stack.pop()
-                # print(stack,'1')
                 if len(stack)==0:
                     list1.append(i)
             if s1[i]==')' and stack[0]=='(':
                 stack.pop()
-                # print(stack,'2')
                 if len(stack)==0:
                     list1.append(i)
             else:
                 stack.append(s1[i])
-                # print(stack)
-        print(s1)
         if len(list1) ==0:
             return ""
         for j in range(0,len(s1)):
