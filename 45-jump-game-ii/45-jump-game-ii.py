@@ -7,7 +7,7 @@ class Solution:
                 if nums[i]>= ptr-i:
                     ptr=i
                     count+=1
-                    print(count)
+                    # print(count)
                     break
             
         return count
