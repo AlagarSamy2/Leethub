@@ -11,7 +11,8 @@ class Solution:
         queue.append(root)
         while queue:
             level=[]
-            for i in range(len(queue)):
+            queue_length=len(queue)
+            for i in range(queue_length):
                 temp=queue.pop(0)
                 if temp:
                     level.append(temp.val)
