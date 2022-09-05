@@ -4,7 +4,7 @@ class Solution:
         Col=len(grid[0])
         count=0
         def dfs(i,j):
-            if (i<0 or i>Row-1 or j<0 or j>Col-1):
+            if (i<0 or i>=Row or j<0 or j>=Col):
                 return 0
             if grid[i][j]==1:
                 return 1
@@ -14,10 +14,8 @@ class Solution:
             c=dfs(i,j+1)
             d=dfs(i,j-1)
             return a and b and c and d
-        count=0
         for i in range(Row):
             for j in range(Col):
                 if (grid[i][j]==0):
                     count=count+dfs(i,j)
-        return count
-        
+        return (count)
